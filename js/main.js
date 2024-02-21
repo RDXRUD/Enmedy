@@ -12,22 +12,23 @@
     };
     spinner();
     
-    // var context = new AudioContext();
-    // context.resume();
+    var context = new AudioContext();
+    
     
     // Initiate the wowjs
     new WOW().init();
 
     
-        document.addEventListener('click', function() {
-            playBackgroundMusic();
-        });
-        function playBackgroundMusic() {
-            if (bgMusic.paused) {
-                bgMusic.play();
-                console.log('Playback started successfully');
-            }
+    document.addEventListener('click', function() {
+        playBackgroundMusic();
+    });
+    function playBackgroundMusic() {
+        if (bgMusic.paused) {
+            context.resume();
+            bgMusic.play();
+            console.log('Playback started successfully');
         }
+    }
 
     
 
