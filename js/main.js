@@ -1,6 +1,7 @@
 (function ($) {
     "use strict";
 
+    
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -11,10 +12,24 @@
     };
     spinner();
     
+    // var context = new AudioContext();
+    // context.resume();
     
     // Initiate the wowjs
     new WOW().init();
 
+    
+        document.addEventListener('click', function() {
+            playBackgroundMusic();
+        });
+        function playBackgroundMusic() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                console.log('Playback started successfully');
+            }
+        }
+
+    
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -57,7 +72,7 @@
         var currentUrl = window.location.href;
         console.log(currentUrl);
         // Check if the URL contains the keyword for each section
-        console.log(currentUrl.indexOf("#about-section"));
+        // console.log(currentUrl.indexOf("#about-section"));
         if (currentUrl.indexOf("#header-carousel") !== -1) {
             $("a[href='#header-carousel']").addClass("active");
         } else if (currentUrl.indexOf("#about-section") !== -1) {
@@ -186,4 +201,5 @@ function checkOther() {
         otherInput.style.display = "none";
     }
 }
+
 

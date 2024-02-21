@@ -278,13 +278,20 @@ h6,
 }
 
 @media (max-width: 576px) {
+    .navbar h1{
+        font-size: 22px;
+        padding-left: 3%;
+    } 
     .carousel-caption h5 {
         font-size: 14px;
-        font-weight: 500 !important;
+        font-weight: 300 !important;
     }
-
+    .carousel-caption h3 {
+        font-size: 16 px;
+        font-weight: 450 !important;
+    }
     .carousel-caption h1 {
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600 !important;
     }
 }
