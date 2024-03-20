@@ -164,18 +164,17 @@ function submitform(){
     var otherSubject = document.getElementById("OtherSubject").value;
     var otherInput = document.getElementById("otherInput");
     if(otherInput.style.display == "block"){
-        subject=otherSubject
+        subject=otherSubject;
     }
     console.log(subject)
-    var body="Name: "+ name + "<br/>Email: "+ email+ "<br/>Subject: "+ subject + "<br/>Message: "+ message
+    var body="Name: "+ name + "<br/>Email: "+ email+ "<br/>Subject: "+ subject + "<br/>Message: "+ message;
 
 
     // console.log("sum=bmitform",body)    
     Email.send({
         SecureToken:"2ff701b7-d196-49d1-bec6-9f32e74ee64c",
-        // Host : "smtp.elasticemail.com",
-        // Username : "rudrakshagarwal03@gmail.com",
-        // Password : "DD94662D617EA5D7D9685C8E1383BC3D57F4",
+        
+        SecureToken:"041b1ebc-7ab3-4d63-b62b-5b2b1790d0ee",
         To : 'rudrakshagarwal03@gmail.com',
         From : "rudrakshagarwal03@gmail.com",
         Subject : subject,
